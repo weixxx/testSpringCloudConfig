@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: dev
+
+
+---
+spring:
+  application:
+    name: weixx-config-dev
+  profiles: dev
+
+
+---
+spring:
+  application:
+    name: weixx-config-test
+  profiles: test
