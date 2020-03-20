@@ -1,0 +1,48 @@
+server:
+  port: 8084
+
+spring:
+  profiles: dev
+  application:
+    name: weixx.provider-depart
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    type: 'com.alibaba.druid.pool.DruidDataSource'
+    url: 'jdbc:mysql://172.17.0.2/test1?useUnicode=true&characterEncoding=UTF-8'
+    username: root
+    password: root
+
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8100.com:8100/eureka
+
+---
+server:
+  port: 8085
+
+spring:
+  profiles: test
+  application:
+    name: weixx-provider-depart
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    type: 'com.alibaba.druid.pool.DruidDataSource'
+    url: 'jdbc:mysql://172.17.0.2/test2?useUnicode=true&characterEncoding=UTF-8'
+    username: root
+    password: root
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8200.com:8200/eureka

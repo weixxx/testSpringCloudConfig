@@ -1,0 +1,35 @@
+spring:
+  profiles: dev
+  application:
+    name: weixx-eurekaServer-config
+
+server:
+  port: 8100
+
+eureka:
+  instance:
+    hostname: eureka8100.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka8100.com:8100/eureka
+
+---
+spring:
+  profiles: test
+  application:
+    name: weixx-eurekaServer-config
+
+server:
+  port: 8200
+
+eureka:
+  instance:
+    hostname: eureka8200.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka8200.com:8200/eureka
+
