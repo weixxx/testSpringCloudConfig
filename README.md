@@ -1,0 +1,2 @@
+# testSpringCloudConfig
+my self test !!!
